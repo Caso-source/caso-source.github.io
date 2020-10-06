@@ -1,2 +1,6 @@
 remote_theme: pmarsceill/just-the-docs
 
+title: Doc's Wrtiteups
+description: A Collection 
+baseurl: "/The-Laboratory" 
+url: "https://doctorzorka.github.io" 

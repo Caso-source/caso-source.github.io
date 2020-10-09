@@ -1,0 +1,6 @@
+remote_theme: pmarsceill/just-the-docs
+
+title: The Laboratory
+description: A Collection 
+baseurl: "/The-Laboratory" 
+url: "https://doctorzorka.github.io" 

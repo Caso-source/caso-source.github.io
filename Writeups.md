@@ -1,9 +1,9 @@
 ---
-title: Test
+title: Writeups
 has_children: true
-nav_order: 3
+nav_order: 2
 ---
 
-#HackTheBox
+# HackTheBox
 
-#InjuredAndroid
+# InjuredAndroid

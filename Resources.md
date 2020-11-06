@@ -25,6 +25,11 @@ nav_order: 1
 [Defeat Bitdefender total security using windows API unhooking to perform process injection](https://shells.systems/defeat-bitdefender-total-security-using-windows-api-unhooking-to-perform-process-injection/)
 [How to Build Obfuscated Macros for your Next Social Engineering Campaign](https://blog.focal-point.com/how-to-build-obfuscated-macros-for-your-next-social-engineering-campaign)
 [Emotet infection from PHP: generation of a malicious doc](https://andpalmier.github.io/posts/emotet-php-maldoc/)
+[Modern Binary Exploitation - CSCI 4968](https://github.com/RPISEC/MBE)
+[Pwnable KR](http://pwnable.kr/)
+[Reversing KR](http://reversing.kr/)
+[W3Challs](https://w3challs.com/)
+
 
 # Web app 
 [Building a Hacker Mindset & Recon For Bug Bounties](https://drive.google.com/file/d/1bYx_asG1LCbYaCv70SaVBrPxRa4g-WTH/view)

@@ -23,8 +23,7 @@ nav_order: 1
 [How to bypass EQU8 Anticheat](https://guidedhacking.com/threads/how-to-bypass-equ8-anticheat.16132/)
 [x64 Linux Binary Exploitation Training](https://www.youtube.com/watch?v=gxU3e7GbC-M)
 [Defeat Bitdefender total security using windows API unhooking to perform process injection](https://shells.systems/defeat-bitdefender-total-security-using-windows-api-unhooking-to-perform-process-injection/)
-[How to Build Obfuscated Macros for your Next Social Engineering Campaign]
-(https://blog.focal-point.com/how-to-build-obfuscated-macros-for-your-next-social-engineering-campaign)
+[How to Build Obfuscated Macros for your Next Social Engineering Campaign](https://blog.focal-point.com/how-to-build-obfuscated-macros-for-your-next-social-engineering-campaign)
 [Emotet infection from PHP: generation of a malicious doc](https://andpalmier.github.io/posts/emotet-php-maldoc/)
 
 # Web app 

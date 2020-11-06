@@ -13,8 +13,8 @@ nav_order: 1
 {:toc}
 </details>
 
--3 Step RDP Honeypot
--https://medium.com/pythonic-forensics/3-step-rdp-honeypot-step-3-build-the-bot-c6552fab1740
+
+
 
 # Exploitation
 Exploit Development for Dummies
@@ -79,4 +79,6 @@ https://picoctf.org/
 OverTheWire
 https://overthewire.org/wargames/
 
-
+# Misc
+[3 Step RDP Honeypot]
+(https://medium.com/pythonic-forensics/3-step-rdp-honeypot-step-3-build-the-bot-c6552fab1740)

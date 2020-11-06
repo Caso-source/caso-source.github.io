@@ -17,9 +17,9 @@ nav_order: 1
 
 
 # Exploitation
-Exploit Development for Dummies
-https://youtu.be/c7H1W4BmZ6g
-https://github.com/justinsteven/dostackbufferoverflowgood/blob/master/dostackbufferoverflowgood_tutorial.pdf
+-Exploit Development for Dummies
+-https://youtu.be/c7H1W4BmZ6g
+-https://github.com/justinsteven/dostackbufferoverflowgood/blob/master/dostackbufferoverflowgood_tutorial.pdf
 NINA: x64 Process Injection
 https://undev.ninja/nina-x64-process-injection/
 https://github.com/uf0o/CVE-2020-17382/blob/master/win10/win10_1709_CVE-2020-17382.c
@@ -35,10 +35,10 @@ Emotet infection from PHP: generation of a malicious doc
 https://andpalmier.github.io/posts/emotet-php-maldoc/
 
 # Web app 
-Building a Hacker Mindset & REcon For Bug Bounties
+Building a Hacker Mindset & Recon For Bug Bounties
 https://drive.google.com/file/d/1bYx_asG1LCbYaCv70SaVBrPxRa4g-WTH/view
 
-# Malware Analyssis & Reverse Engineering
+# Malware Analysis & RE
 Beginner Reversing #1 (Strings Challenges & Python Breakpoints)
 https://youtu.be/w_rQJ7u-lpk  
 0xf0x Youtbube Channel
@@ -80,5 +80,5 @@ OverTheWire
 https://overthewire.org/wargames/
 
 # Misc
-[3 Step RDP Honeypot]
-(https://medium.com/pythonic-forensics/3-step-rdp-honeypot-step-3-build-the-bot-c6552fab1740)
+[lunr.js](http://lunrjs.com)
+[3 Step RDP Honeypot](https://medium.com/pythonic-forensics/3-step-rdp-honeypot-step-3-build-the-bot-c6552fab1740)

@@ -1,7 +1,5 @@
 remote_theme: pmarsceill/just-the-docs
 
-<<<<<<< Updated upstream
-=======
 color_scheme: dark
 
 title: The Laboratory
@@ -11,4 +9,6 @@ url: "https://doctorzorka.github.io"
 # Enable or disable the site search
 # Supports true (default) or false
 search_enabled: true
->>>>>>> Stashed changes
+
+# Maximum amount of previews per search result
+ previews: 5

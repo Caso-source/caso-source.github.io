@@ -5,7 +5,4 @@ has_children: true
 parent: Writeups
 nav_order: 2
 ---
-
-# HackTheBox
-
-# InjuredAndroid
+# hellllo

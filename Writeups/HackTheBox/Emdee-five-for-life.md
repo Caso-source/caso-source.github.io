@@ -11,9 +11,9 @@ Navigating to the IP in our browswer we get:
 
 ![](flag-embeed.PNG)
 
-After hopping on the target IP a simple web page pops us with the title "MD5 encrpyt this string" followed by a alphanumeric string and a submit field. 
-
 The challenge here is to be able to submit the md5 encoded string within a very short window of time which can be done with a little scripting.
+
+![](noflag-embeed.PNG)
 
 
 
@@ -23,7 +23,50 @@ Looking at the challenge it became obvious that in order to be fast enough to co
 
 The script I wrote used the libraries Selenium and BeautifulSoup.
 
+```python
+# Python program to use selenium and Beautiful Soup to parse/interact with web page
+
+# import webdriver 
+from selenium import webdriver 
+from bs4 import BeautifulSoup
+import hashlib
+
+# create webdriver object 
+driver = webdriver.Firefox() 
+
+# get the target website
+driver.get("http://167.99.85.197:30369/") 
+
+html = driver.page_source
+
+soup = BeautifulSoup(html,features="lxml")
+
+#find the txt to be encoded
+for tag in soup.find_all('h3'):
+  target = tag.text
+
+# encoding the given text using encode() 
+# then sending to md5() 
+md5 = hashlib.md5(target.encode()) 
+
+
+md5String=md5.hexdigest()
+
+element = driver.find_element_by_name("hash")
+element.send_keys(md5String)
+
+
+# get submit button element from xpath
+submitButton = driver.find_element_by_xpath("/html/body/center/form/input[2]") 
+
+#click submit button
+submitButton.click()
+```
+
+
 Within the Script I included comments that explain the process of what the script does but I will also give a small summary:
+
+
 
 1. Opens firefox and navigates to target IP
 2. Locates and parses the string to be encoded

@@ -1,8 +1,10 @@
 ---
 layout: default
-title: InjuredAndroid
+title: Writeups
 has_children: true
-parent: Writeups
 nav_order: 2
 ---
-# hellllo
+
+# HackTheBox
+
+# InjuredAndroid

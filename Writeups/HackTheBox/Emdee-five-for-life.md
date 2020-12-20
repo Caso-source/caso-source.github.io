@@ -12,7 +12,6 @@ Challenge:
 
 Navigating to the IP in our browswer we get:
 
-!(https://doctorzorka.github.io/Writeups/HackTheBox/flag-embeed.png "Flag")
 After hopping on the target IP a simple web page pops us with the title "MD5 encrpyt this string" followed by a alphanumeric string and a submit field. 
 
 The challenge here is to be able to submit the md5 encoded string within a very short window of time which can be done with a little scripting.

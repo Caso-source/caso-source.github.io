@@ -9,7 +9,7 @@ Challenge:
 Navigating to the IP in our browswer we get:
 
 
-![](/flag-embeed.png)
+![](flag-embeed.PNG)
 
 After hopping on the target IP a simple web page pops us with the title "MD5 encrpyt this string" followed by a alphanumeric string and a submit field. 
 

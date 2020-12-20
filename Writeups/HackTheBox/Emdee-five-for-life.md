@@ -4,10 +4,6 @@ title: Emdee-five-for-life
 parent: HackTheBox
 nav_order: 2
 ---
-
-Introduction:
-kdjjdjdjjdj
-
 Challenge:
 
 Navigating to the IP in our browswer we get:

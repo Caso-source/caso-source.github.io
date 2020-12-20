@@ -9,7 +9,7 @@ Challenge:
 Navigating to the IP in our browswer we get:
 
 
-![](flag-embeed.PNG)
+![](challenge-emdee.PNG)
 
 The challenge here is to be able to submit the md5 encoded string within a very short window of time which can be done with a little scripting.
 
@@ -78,3 +78,9 @@ Within the Script I included comments that explain the process of what the scrip
 2. Locates and extracts the string to be encoded
 3. Encodes the extracted string into a md5 hash
 4. Inputs the now encoded string into the submission box and clicks "submit" button
+
+
+Once we run with python3 emdee-script.py we get the flag.
+
+![](flag-embeed.PNG)
+

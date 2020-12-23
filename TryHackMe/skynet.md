@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Skynet
-has_children: true
+parent: TryHackMe
 nav_order: 2
 ---
 

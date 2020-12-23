@@ -2,7 +2,7 @@
 layout: default
 title: Skynet
 parent: TryHackMe
-nav_order: 3
+nav_order: 2
 ---
 
 ## [](#header-2)Summary:

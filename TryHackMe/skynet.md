@@ -35,11 +35,11 @@ Running gobuster reveals two interesting finds an admin direcory and a mail serv
 ## [](#header-2)Enumeration:
 
 
-From here the only smbshare we are able to access at this point is "anonymous" which has "READ ONLY" permissions.
+From here the only smbshare I am able to access at this point is "anonymous" which has "READ ONLY" permissions.
 ```bash
 smbclient //<targetip>/anonymous 
 ```
-Once we are in the anonymous share we can see two files/folders of interest.
+Once I am in the anonymous share I can see two files/folders of interest.
 ![](pictures/sambadir-skynet.PNG)
 
 From here we want to retrieve these files to further analyze with the following command.
@@ -60,7 +60,9 @@ A recent system malfunction has caused various passwords to be changed. All skyn
 
 
 
-We then find that log1.txt contains what seems to be passwords that mightve been apart of the recent change.
+I then find that log1.txt contains what seems to be passwords that might've been apart of the recent change.
+
+```bash
 kali@kali:~/Desktop/tryhackme/skynet$ cat log1.txt 
 cyborg007haloterminator
 terminator22596
@@ -93,13 +95,42 @@ alonsoterminator
 Walterminator
 79terminator6
 1996terminator
-'''
+```
+
+With this list of passwords we are able to throw these in burp to perform a bruteforcing attack on their squirrel mail sever.
+![](pictures/burp-skynet.PNG)
+
+Noticing that one of the Length fields is different then the others is indicative of that input being the right combination of username/password.
+
+Once were into Miles's email we find three emails containing some odd/useful content within the emails.
 
 
+![](pictures/webmail-skynet.PNG)
+
+There are two emails with AI lingo in them one being binary and the other ASCII but they both have the same infoormation.
+It's pretty much useless information but you can find more out about it here:
+https://www.dailydot.com/debug/facebook-ai-invent-language/ - automatic!
+![](pictures/webmail1-skynet.PNG)
+![](pictures/webmail3-skynet.PNG)
 
 
-webmail:
-https://www.dailydot.com/debug/facebook-ai-invent-language/
+There we go!
+![](pictures/webmail2-skynet.PNG)
+
+
+Since the password is for his Samba share we then proceed to use it to login to his share(milesdyson).
+
+After logging into his account we find a bunch of notes on algorithms/AI/mathematics and a note titled "important.txt"
+
+Using the following commands I am able to retrieve the txt file onto my own system
+
+```bash
+smb: \> cd notes
+smb: \notes\> get important.txt
+```
+
+We then see that the 
+![](pictures/samba2-skynet.PNG)
 
 
 searchsploit cuppa

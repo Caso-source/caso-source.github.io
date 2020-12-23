@@ -10,11 +10,11 @@ nav_order: 2
 Navigating to the IP in our browswer we get:
 
 
-![](challenge-emdee.PNG)
+![](pictures/challenge-emdee.PNG)
 
 The challenge here is to be able to submit the md5 encoded string within a very short window of time which can be done with a little scripting.
 
-![](noflag-embeed.PNG)
+![](pictures/noflag-embeed.PNG)
 
 
 
@@ -83,5 +83,5 @@ Within the Script I included comments that explain the process of what the scrip
 
 Once we run with python3 emdee-script.py we get the flag.
 
-![](flag-embeed.PNG)
+![](pictures/flag-embeed.PNG)
 

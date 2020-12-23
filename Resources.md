@@ -43,13 +43,13 @@ nav_order: 1
 [Reversing KR](http://reversing.kr/)\
 
 # Cloud
-[Tutorial on privilege escalation and post exploitation tactics in Google Cloud Platform environments](https://about.gitlab.com/blog/2020/02/12/plundering-gcp-escalating-privileges-in-google-cloud-platform/)\
+[Tutorial on privilege escalation and post exploitation tactics in Google Cloud Platform environments](https://about.gitlab.com/blog/2020/02/12/plundering-gcp-escalating-privileges-in-google-cloud-platform/)
 [ghostlulz1337's post](https://twitter.com/ghostlulz1337/status/1314262418441338881?s=20)\
 
 # Mobile
 [Mobile Pentest Cheatsheet](https://github.com/whb224117/MobileApp-Pentest-Cheatsheet)\ 
 [Mobile Hacking Workshop](https://twitter.com/B3nac/status/1317185026677641218?s=20)\
-[How to configure Android (Virtual) for Mobile PenTest](https://securityboulevard.com/2020/09/how-to-configure-android-virtual-for-mobile-pentest/)\
+[How to configure Android (Virtual) for Mobile PenTest](https://securityboulevard.com/2020/09/how-to-configure-android-virtual-for-mobile-pentest/)
 [B3nac Sec Youtube](https://www.youtube.com/channel/UCeSBNDhEqcQSfeR8LEcD-NA)\
 [Appie – Android Pentesting Portable Integrated Environment](https://manifestsecurity.com/appie/)\
 
@@ -59,5 +59,5 @@ nav_order: 1
 [Awesome Vulnerable Applications](https://github.com/vavkamil/awesome-vulnerable-apps)\
 
 # Misc
-[PENTESTING-BIBLE](https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE)\
-[3 Step RDP Honeypot](https://medium.com/pythonic-forensics/3-step-rdp-honeypot-step-3-build-the-bot-c6552fab1740)\
+[PENTESTING-BIBLE](https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE)
+[3 Step RDP Honeypot](https://medium.com/pythonic-forensics/3-step-rdp-honeypot-step-3-build-the-bot-c6552fab1740)

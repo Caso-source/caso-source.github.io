@@ -17,9 +17,9 @@ nav_order: 1
 
 
 # Exploitation
-[Exploit Development for Dummies](https://youtu.be/c7H1W4BmZ6g)\s\s
-[NINA: x64 Process Injection](https://undev.ninja/nina-x64-process-injection/)
-[CVE-2020-17382](https://github.com/uf0o/CVE-2020-17382/blob/master/win10/win10_1709_CVE-2020-17382.c)
+[Exploit Development for Dummies](https://youtu.be/c7H1W4BmZ6g)\
+[NINA: x64 Process Injection](https://undev.ninja/nina-x64-process-injection/)\
+[CVE-2020-17382](https://github.com/uf0o/CVE-2020-17382/blob/master/win10/win10_1709_CVE-2020-17382.c)\
 [How to bypass EQU8 Anticheat](https://guidedhacking.com/threads/how-to-bypass-equ8-anticheat.16132/)
 [x64 Linux Binary Exploitation Training](https://www.youtube.com/watch?v=gxU3e7GbC-M)
 [Defeat Bitdefender total security using windows API unhooking to perform process injection](https://shells.systems/defeat-bitdefender-total-security-using-windows-api-unhooking-to-perform-process-injection/)

@@ -27,7 +27,7 @@ nav_order: 1
 [Emotet infection from PHP: generation of a malicious doc](https://andpalmier.github.io/posts/emotet-php-maldoc/)\
 [Modern Binary Exploitation - CSCI 4968](https://github.com/RPISEC/MBE)\
 [Pwnable KR](http://pwnable.kr/)\
-[W3Challs](https://w3challs.com/)\
+[W3Challs](https://w3challs.com/)
 
 
 # Web app 
@@ -44,7 +44,7 @@ nav_order: 1
 
 # Cloud
 [Tutorial on privilege escalation and post exploitation tactics in Google Cloud Platform environments](https://about.gitlab.com/blog/2020/02/12/plundering-gcp-escalating-privileges-in-google-cloud-platform/)
-[ghostlulz1337's post](https://twitter.com/ghostlulz1337/status/1314262418441338881?s=20)\
+[ghostlulz1337's post](https://twitter.com/ghostlulz1337/status/1314262418441338881?s=20)
 
 # Mobile
 [Mobile Pentest Cheatsheet](https://github.com/whb224117/MobileApp-Pentest-Cheatsheet)\ 
@@ -56,8 +56,8 @@ nav_order: 1
 # CTF
 [picoCTF](https://picoctf.org/)\
 [OverTheWire](https://overthewire.org/wargames/)\
-[Awesome Vulnerable Applications](https://github.com/vavkamil/awesome-vulnerable-apps)\
+[Awesome Vulnerable Applications](https://github.com/vavkamil/awesome-vulnerable-apps)
 
 # Misc
-[PENTESTING-BIBLE](https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE)
+[PENTESTING-BIBLE](https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE)\
 [3 Step RDP Honeypot](https://medium.com/pythonic-forensics/3-step-rdp-honeypot-step-3-build-the-bot-c6552fab1740)

@@ -4,7 +4,8 @@ title: Emdee five for life
 parent: HackTheBox
 nav_order: 2
 ---
-Challenge:
+## [](#header-2)Challenge:
+
 
 Navigating to the IP in our browswer we get:
 
@@ -17,7 +18,7 @@ The challenge here is to be able to submit the md5 encoded string within a very 
 
 
 
-Solution:
+## [](#header-2)Solution:
 
 Looking at the challenge it became obvious that in order to be fast enough to complete the challenge I would need to automate this process.
 

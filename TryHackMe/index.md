@@ -1,6 +1,8 @@
 ---
 layout: default
-title: TryHackMe
-has_children: true
-nav_order: 3
+title: Skynet
+parent: TryHackMe
+nav_order: 1
 ---
+
+

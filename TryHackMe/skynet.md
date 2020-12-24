@@ -7,7 +7,7 @@ nav_order: 2
 
 ## [](#header-2)Summary:
 
-1. Find/Enumarate Samba  
+1. Find/Enumarate Samba Shares
 2. Bruteforce mail server login 
 3. Find hidden web dir 
 4. Use Cuppa exploit to drop remote shell for intitial access
@@ -35,7 +35,7 @@ Running gobuster reveals two interesting finds an admin direcory and a mail serv
 ## [](#header-2)Intrusion:
 
 
-From here the only smbshare I am able to access at this point is "anonymous" which has "READ ONLY" permissions.
+To begin the only smbshare I am able to access at this point is "anonymous" which has "READ ONLY" permissions.
 ```bash
 smbclient //<targetip>/anonymous 
 ```

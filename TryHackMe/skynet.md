@@ -277,9 +277,9 @@ An article that also really helped me understand what was going on during this t
 https://www.helpnetsecurity.com/2014/06/27/exploiting-wildcards-on-linux/
 
 The basics of it are that three seperate folders are made within the /var/www/html folder
---checkpoint=1 
---checkpoint-action=exec=sh shell.sh
-shell.sh
+- --checkpoint=1 
+- --checkpoint-action=exec=sh shell.sh
+- shell.sh
 
 In combination these folders allow arbitrary code exectution(our shell file) whenever the file is tar is used in the cronjob
 

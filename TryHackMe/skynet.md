@@ -98,27 +98,27 @@ Walterminator
 ```
 
 With this list of passwords we are able to throw these in burp to perform a bruteforcing attack on their squirrel mail sever.
-![](pictures/burp-skynet.PNG)
+![](pictures/burp-skynet.png)
 
 Noticing that one of the Length fields is different then the others is indicative of that input being the right combination of username/password.
 
 Once were into Miles's email we find three emails containing some odd/useful content within the emails.
 
 
-![](pictures/webmail-skynet.PNG)
+![](pictures/webmail-skynet.png)
 
 There are two emails with AI lingo in them one being binary and the other ASCII but they both have the same infoormation.
 It's pretty much useless information but you can find more out about it here:
 https://www.dailydot.com/debug/facebook-ai-invent-language/
 
-![](pictures/webmail1-skynet.PNG)
+![](pictures/webmail1-skynet.png)
 
 
-![](pictures/webmail3-skynet.PNG)
+![](pictures/webmail3-skynet.png)
 
 
 There we go!
-![](pictures/webmail2-skynet.PNG)
+![](pictures/webmail2-skynet.png)
 
 
 Since the password is for his Samba share we then proceed to use it to login to his share(milesdyson).
@@ -133,10 +133,10 @@ smb: \notes\> get important.txt
 ```
 
 We then see that the their is a directory that wasn't picked up in our initial gobuster scan.
-![](pictures/samba2-skynet.PNG)
+![](pictures/samba2-skynet.png)
 
 Navigating to the site we can see a "cuppa" login portal.
-![](pictures/cuppa-skynet.PNG)
+![](pictures/cuppa-skynet.png)
 
 ## [](#header-2)Exploitation:
 
@@ -253,7 +253,7 @@ http://<victim ip>/45kra24zxs28v3yd/administrator/alerts/alertConfigField.php?ur
 
 and we get a shell!
 
-![](pictures/shell-skynet.PNG)
+![](pictures/shell-skynet.png)
 
 From here we can find the user.txt flag in miles directory.
 
@@ -261,7 +261,7 @@ From here we can find the user.txt flag in miles directory.
 
 Cronjobs are one of the main things I check during a CTF and once I checked /etc/crontab I saw that there was a cronjob going off every minute which is definetly interesting.
 
-![](pictures/privesc-skynet.PNG)
+![](pictures/privesc-skynet.png)
 
 After further inspection of the cronjob 
 
@@ -283,6 +283,6 @@ shell.sh
 
 In combination these folders allow arbitrary code exectution(our shell file) whenever the file is tar is used in the cronjob
 
-![](pictures/root-skynet.PNG)
+![](pictures/root-skynet.png)
 
 I only got the root flag out of this device but this exploit would basically allow for any code to be executed on the target device as root.

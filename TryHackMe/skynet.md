@@ -109,8 +109,11 @@ Once were into Miles's email we find three emails containing some odd/useful con
 
 There are two emails with AI lingo in them one being binary and the other ASCII but they both have the same infoormation.
 It's pretty much useless information but you can find more out about it here:
-https://www.dailydot.com/debug/facebook-ai-invent-language/ - automatic!
+https://www.dailydot.com/debug/facebook-ai-invent-language/
+
 ![](pictures/webmail1-skynet.PNG)
+
+
 ![](pictures/webmail3-skynet.PNG)
 
 
@@ -254,7 +257,7 @@ and we get a shell!
 
 From here we can find the user.txt flag in miles directory.
 
-## [](#header-2)Privledge Escalation:
+## [](#header-2)Priviledge Escalation:
 
 Cronjobs are one of the main things I check during a CTF and once I checked /etc/crontab I saw that there was a cronjob going off every minute which is definetly interesting.
 

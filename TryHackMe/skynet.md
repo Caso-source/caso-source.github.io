@@ -102,7 +102,7 @@ With this list of passwords we are able to throw these in burp to perform a brut
 
 Noticing that one of the Length fields is different then the others is indicative of that input being the right combination of username/password.
 
-Once were into Miles's email we find three emails containing some odd/useful content within the emails.
+Once we're into Miles's email we find three emails containing some odd/useful content within the emails.
 
 
 ![](pictures/webmail-skynet.png)
@@ -132,7 +132,7 @@ smb: \> cd notes
 smb: \notes\> get important.txt
 ```
 
-We then see that the their is a directory that wasn't picked up in our initial gobuster scan.
+We then see that the there is a directory that wasn't picked up in our initial gobuster scan.
 ![](pictures/samba2-skynet.png)
 
 Navigating to the site we can see a "cuppa" login portal.
@@ -257,7 +257,7 @@ and we get a shell!
 
 From here we can find the user.txt flag in miles directory.
 
-## [](#header-2)Priviledge Escalation:
+## [](#header-2)Privilege Escalation:
 
 Cronjobs are one of the main things I check during a CTF and once I checked /etc/crontab I saw that there was a cronjob going off every minute which is definetly interesting.
 
@@ -271,7 +271,7 @@ cat backup.sh
 cd /var/www/html
 tar cf /home/milesdyson/backups/backup.tgz *
 ```
-I found that it backs up the website with the tar command which is a command that can be abused according to https://gtfobins.github.io/#+sudo.
+I found that it backs up the /var/www/html directory with the tar command which is a command that can be abused according to https://gtfobins.github.io/#+sudo.
 
 An article that also really helped me understand what was going on during this technique:
 https://www.helpnetsecurity.com/2014/06/27/exploiting-wildcards-on-linux/
@@ -281,7 +281,7 @@ The basics of it are that three seperate folders are made within the /var/www/ht
 - --checkpoint-action=exec=sh shell.sh
 - shell.sh
 
-In combination these folders allow arbitrary code exectution(our shell file) whenever the file is tar is used in the cronjob
+In combination these folders allow arbitrary code exectution(our shell file) whenever the file is zipped with tar during the cronjob
 
 ![](pictures/root-skynet.png)
 

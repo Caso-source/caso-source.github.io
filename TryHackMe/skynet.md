@@ -7,7 +7,7 @@ nav_order: 2
 
 ## [](#header-2)Summary:
 
-1. Find/Enumarate Samba Shares
+1. Find/Enumerate Samba Shares
 2. Bruteforce mail server login 
 3. Find hidden web dir 
 4. Use Cuppa exploit to drop remote shell for intitial access

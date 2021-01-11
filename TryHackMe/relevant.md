@@ -23,6 +23,8 @@ The webpage only contains links to Microsofts actual IIS webpage.
 
 ![](pictures/website1-relevant.png)
 
+From the nmap results we can see that multiple services running smb(ports 139,445),http(port 80,49663),RPC(ports 135,49667,49668). Since I am somewhat familiar with using smb shares for explotation I'll look into those first.
+
 
 ![](pictures/nmap-relevant.png)
 From the nmap results we can see that multiple services running smb(ports 139,445),http(port 80,49663),RPC(ports 135,49667,49668). Since I am somewhat familiar with using smb shares for explotation I'll look into those first.
@@ -51,6 +53,8 @@ Enter WORKGROUP\kali's password:
 Try "help" to get a list of possible commands.
 smb: \> dir
 ```
+
+
 After analyzing the nt4wrksv share I found a file "passwords.txt" which seems a little too good to be true but alright.
 ```bash
 smb: \> dir

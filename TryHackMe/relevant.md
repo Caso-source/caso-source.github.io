@@ -16,8 +16,8 @@ nav_order: 4
 
 First we'll scan for any services or open ports that may be running/open.
 
-While I'm doing that I navigate to the targetIP in my broswer to see if there is a web application that can provide more information.
-![](pictures/website-relevant.PNG)
+While I'm doing that I navigate to the target IP in my browser to see if there is a web application that can provide more information.
+![](pictures/website-relevant.png)
 
 The webpage only contains links to Microsofts actual IIS webpage.
 
@@ -63,7 +63,7 @@ getting file \passwords.txt of size 0 as passwords.txt (0.1 KiloBytes/sec) (aver
 
 ```
 
-Once I grab the password.txt file and analyzed it I see that there are some possible credentials that have been encoded seemingly with base64(due to the "==")
+Once I grab the password.txt file and analyzed it I saw that there are some possible credentials that have been encoded seemingly with base64(due to the "==")
 
 ![](pictures/pass0-relevant.png)
 
@@ -107,7 +107,7 @@ and we finally get a shell!
 
 ## [](#header-2)Explotation:
 
-Finding the user flag within Bob's desktop folder.
+Once inside we are able to 
 
 
 Once we try and navigate to the admin folder we can see that our current permissions don't allow it.
@@ -120,11 +120,10 @@ Furthermore we check our current privledges to see if there is any way we can pr
 
 
 After looking at many possible privesc avenues I found that some techniques involving the SeImpersonatePrivilege would be the best choice.
-https://github.com/dievus/printspoofer
 
-I found PrintSpoofer to be the most up to date/convenient tool to use in this case.
+I found [PrintSpoofer](https://github.com/dievus/printspoofer) to be the most up to date/convenient tool to use in this case.
 
-To upload this file to our server I uploaded it to the smb share's directory and found the directory within our shell with a quick search
+To upload this file to our server I uploaded it to the smb share's directory and found the directory within our shell with a quick search. 
 ![](pictures/find-relevant.png)
 
 

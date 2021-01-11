@@ -27,7 +27,7 @@ From the nmap results we can see that multiple services running smb(ports 139,44
 
 
 ![](pictures/nmap-relevant.png)
-From the nmap results we can see that multiple services running smb(ports 139,445),http(port 80,49663),RPC(ports 135,49667,49668). Since I am somewhat familiar with using smb shares for explotation I'll look into those first.
+
 
 
 
@@ -111,7 +111,7 @@ and we finally get a shell!
 
 ## [](#header-2)Explotation:
 
-Once inside we are able to 
+Once inside we are able to find the user flag in Bob's desktop folder.
 
 
 Once we try and navigate to the admin folder we can see that our current permissions don't allow it.

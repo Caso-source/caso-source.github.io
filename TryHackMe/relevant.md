@@ -11,10 +11,10 @@ nav_order: 4
 ## Table of contents
 {: .no_toc .text-delta }
 
-1. Summary
-2. Recon
-3. Intrusion
-4. Explotation
+- Summary
+- Recon
+- Intrusion
+- Explotation
 {:toc}
 
 ## [](#header-2)Summary:

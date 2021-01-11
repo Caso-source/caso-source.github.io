@@ -5,6 +5,18 @@ parent: TryHackMe
 nav_order: 4
 ---
 
+# Navigation Structure
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. Summary
+2. Recon
+3. Intrusion
+4. Explotation
+{:toc}
+
 ## [](#header-2)Summary:
 
 1. Find/Enumerate Samba Shares

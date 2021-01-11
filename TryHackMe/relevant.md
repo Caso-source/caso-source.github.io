@@ -21,10 +21,10 @@ While I'm doing that I navigate to the targetIP in my broswer to see if there is
 
 The webpage only contains links to Microsofts actual IIS webpage.
 
-![](pictures/website1-relevant.PNG)
+![](pictures/website1-relevant.png)
 
 
-![](pictures/nmap-relevant.PNG)
+![](pictures/nmap-relevant.png)
 From the nmap results we can see that multiple services running smb(ports 139,445),http(port 80,49663),RPC(ports 135,49667,49668). Since I am somewhat familiar with using smb shares for explotation I'll look into those first.
 
 
@@ -65,20 +65,20 @@ getting file \passwords.txt of size 0 as passwords.txt (0.1 KiloBytes/sec) (aver
 
 Once I grab the password.txt file and analyzed it I see that there are some possible credentials that have been encoded seemingly with base64(due to the "==")
 
-![](pictures/pass0-relevant.PNG)
+![](pictures/pass0-relevant.png)
 
 After further decoding with the base64 tool we get two possible usernames and passwords.
-![](pictures/pass1-relevant.PNG)
+![](pictures/pass1-relevant.png)
 
 My goal now is to figure out where these usernames can be possibly used. 
 
 While looking for possible areas that the usernames could be used my directory bruteforcing scans with gobuster I found some interesting results.
 
 My initial scans on the target host's default port did not provide any results but when I scanned the host on it's other port running http I found our smb share listed.
-![](pictures/gobuster1-relevant.PNG)
+![](pictures/gobuster1-relevant.png)
 
 Further navigating to the webpage at http://10.10.45.135:49663/nt4wrksv/passwords.txt we can see that the directory is in fact accessible.
-![](pictures/49663-relevant.PNG)
+![](pictures/49663-relevant.png)
 
 
 ## [](#header-2)Intrusion:
@@ -87,10 +87,10 @@ Once I find that I can upload whatever I want to the webserver via the writeable
 Since the client is running in ASP.net (which we can find through the wappalyer firefox addon) our best bet would be to create a reverse shell in a .net format and upload it to the samaba share folder in the hopes that we can get a connection into the target machine.
 
 Now we generate the shell with the help of msfvenom.
-![](pictures/msfvenom-relevant.PNG)
+![](pictures/msfvenom-relevant.png)
 
 Once that is done all we need to do is use the “put” command to upload our shell on the target host.
-![](pictures/shell-relevant.PNG)
+![](pictures/shell-relevant.png)
 
 To prepare connection to the shell we use netcat to listen for our shell with the following command:
 ```bash
@@ -103,7 +103,7 @@ http://10.10.118.174:49663/nt4wrksv/shell.aspx
 
 
 and we finally get a shell!
-![](pictures/shell1-relevant.PNG)
+![](pictures/shell1-relevant.png)
 
 ## [](#header-2)Explotation:
 
@@ -111,11 +111,11 @@ Finding the user flag within Bob's desktop folder.
 
 
 Once we try and navigate to the admin folder we can see that our current permissions don't allow it.
-![](pictures/admin-relevant.PNG)
+![](pictures/admin-relevant.png)
 
 
 Furthermore we check our current privledges to see if there is any way we can privesc.
-![](pictures/admin1-relevant.PNG)
+![](pictures/admin1-relevant.png)
 
 
 
@@ -125,11 +125,11 @@ https://github.com/dievus/printspoofer
 I found PrintSpoofer to be the most up to date/convenient tool to use in this case.
 
 To upload this file to our server I uploaded it to the smb share's directory and found the directory within our shell with a quick search
-![](pictures/find-relevant.PNG)
+![](pictures/find-relevant.png)
 
 
 We can then escalate privileges by performing the following commands:
-![](pictures/root-relevant.PNG)
+![](pictures/root-relevant.png)
 
 Once this is done our root flag is finally accessible!
 

@@ -4,6 +4,20 @@ title: Skynet
 parent: TryHackMe
 nav_order: 2
 ---
+# Navigation Structure
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+![](pictures/logo-skynet.png)
+
+
+- Summary
+- Recon
+- Intrusion
+- Explotation
+{:toc}
 
 ## [](#header-2)Summary:
 

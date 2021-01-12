@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Relevant
+title: Gamezone
 parent: TryHackMe
 nav_order: 5
 ---
@@ -12,7 +12,7 @@ nav_order: 5
 {: .no_toc .text-delta }
 
 
-![](pictures/logo-gamezone.PNG)
+![](pictures/logo-gamezone.png)
 
 
 - Task 1
@@ -22,6 +22,7 @@ nav_order: 5
 - Task 5
 - Task 6
 {:toc}
+
 
 ## [](#header-2)Summary:
 

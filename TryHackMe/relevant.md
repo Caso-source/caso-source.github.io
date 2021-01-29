@@ -18,7 +18,8 @@ nav_order: 4
 - Summary
 - Recon
 - Intrusion
-- Explotation
+- Exploitation
+- Privilege Escalation
 {:toc}
 
 ## [](#header-2)Summary:
@@ -125,7 +126,7 @@ http://10.10.118.174:49663/nt4wrksv/shell.aspx
 and we finally get a shell!
 ![](pictures/shell1-relevant.png)
 
-## [](#header-2)Explotation:
+## [](#header-2)Exploitation:
 
 Once inside we are able to find the user flag in Bob's desktop folder.
 
@@ -146,7 +147,7 @@ I found [PrintSpoofer](https://github.com/dievus/printspoofer) to be the most up
 To upload this file to our server I uploaded it to the smb share's directory and found the directory within our shell with a quick search. 
 ![](pictures/find-relevant.png)
 
-
+## [](#header-2)Privilege Escalation:
 We can then escalate privileges by performing the following commands:
 ![](pictures/root-relevant.png)
 

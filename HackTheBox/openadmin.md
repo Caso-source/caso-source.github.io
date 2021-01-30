@@ -30,7 +30,7 @@ nav_order: 4
 ## [](#header-2)Recon:
 
 
-Doing our regular nmap scan for default scripts and running services I see that there is a ssh port 22 as Ill as apache server running on port 80.
+Doing our regular nmap scan for default scripts and running services I see that there is a ssh port 22 as and an apache server running on port 80.
 
 ![](pictures/nmap-oa.png)
 
@@ -40,12 +40,12 @@ From gobuster I can see a few directories that look interesting.
 ![](pictures/gobuster-oa.png)
 
 
-Once I navigate to the Ib directory I see the default apache config doc.
+Once I go to to the website on port 80, I see the default apache config doc.
 
 
 ![](pictures/apache-oa.png)
 
-After navigating through the Ib directories some more I find that /music has a /create account functions which always peek my interest.
+After navigating through the newly found directories some more I find that /music has a login/create account functions which always peek my interest.
 
 
 
@@ -103,7 +103,7 @@ Once I go through a couple of files I are able to find one with database credent
 
 In order to access the mysql database with these creds I had to get a better shell.
 
-I started by downloading a php reverse shell from a python server I set up on my host computer to the ona Ib folder and executing it
+I started by downloading a php reverse shell from a python server I set up on my host computer to the ona Ib folder and executing it.
 
 ![](pictures/shell-oa.png)
 

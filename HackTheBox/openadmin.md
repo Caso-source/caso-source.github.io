@@ -35,7 +35,7 @@ Doing our regular nmap scan for default scripts and running services I see that 
 ![](pictures/nmap-oa.png)
 
 
-From gobuster I can see a few directories that look interesting.
+From gobuster, I can see a few directories that look interesting.
 
 ![](pictures/gobuster-oa.png)
 
@@ -45,7 +45,7 @@ Once I go to to the website on port 80, I see the default apache config doc.
 
 ![](pictures/apache-oa.png)
 
-After navigating through the newly found directories some more I find that /music has a login/create account functions which always peek my interest.
+After navigating through the newly found directories some more, I find that /music has a login/create account functions which always peek my interest.
 
 
 
@@ -53,30 +53,31 @@ After navigating through the newly found directories some more I find that /musi
 
 
 
-After clicking on the login function I are immediately directed into a OpenNetAdmin portal.
+After clicking on the login function, I am immediately directed into a OpenNetAdmin portal.
 
 ![](pictures/login-oa.png)
 
-When I try logging with admin/admin credentials I are able to successfully log in.
+When I try logging with admin/admin credentials I am able to successfully log in.
 
 ![](pictures/login1-oa.png)
 
-This does not give us any different information unfortunately
+This does not give us any different information unfortunately.
 
-after researching the OpenNetAdmin version with searchsploit I see that the version is vulnerable.
+After researching the OpenNetAdmin version with searchsploit I see that the version is vulnerable.
 
 ![](pictures/sp-oa.png)
 
 TIP: use searchsploit -m flag to put the exploit in same dir.
 
-Once I edit the exploit code a bit and run I are able to get a shell within the OpenNetAdmin directory.
+Once I edit the exploit code a bit and run I am able to get a shell within the OpenNetAdmin directory.
 
 ![](pictures/open-oa.png)
 
 ## [](#header-2)Intrusion:
 
 
-I am able to get pop a shell but it is restricting.
+ 
+Get pop a shell but it is restricting.
 
 From here I wanted to get a more interactive shell so after confirming python was on the system with.
 
@@ -93,7 +94,7 @@ python3 -c "import pty; pty.spawn('/bin/bash')"
 
  and I also tried many other shell methods (perl,sh,ruby,etc..) but none worked, so I just searched through the dirs with ls and cat commands to see if I could find anything useful.
 
-Once I go through a couple of files I are able to find one with database credentials.
+Once I go through a couple of files I am able to find one with database credentials.
 
 
 
@@ -101,9 +102,9 @@ Once I go through a couple of files I are able to find one with database credent
 
 
 
-In order to access the mysql database with these creds I had to get a better shell.
+In order to access the mysql database with these creds, I had to get a better shell.
 
-I started by downloading a php reverse shell from a python server I set up on my host computer to the ona Ib folder and executing it.
+I started by downloading a php reverse shell from a python server I set up on my host computer to the ona web folder and executing it.
 
 ![](pictures/shell-oa.png)
 

@@ -2,7 +2,7 @@
 layout: default
 title: Optimum
 parent: HackTheBox
-nav_order: 5
+nav_order: 3
 ---
 # Navigation Structure
 {: .no_toc }
@@ -15,7 +15,6 @@ nav_order: 5
 - Summary
 - Recon
 - Exploitation
-- Intrusion
 - Privilege Escalation
 {:toc}
 

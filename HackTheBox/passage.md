@@ -223,7 +223,7 @@ Having no idea what "com.ubunu.USBCreator.conf" was I googled and found a very i
 
 I saw the article was written by the man himself nadav, so this was my first hint I was on the right path.
 
-Essentially the exploit allows us to create/overwrite arbitrary files as root with no password as long as the attacker(me) has access to the sudoers group(which nadav has). 
+Essentially, the exploit allows us to create/overwrite arbitrary files as root with no password as long as the attacker(me) has access to the sudoers group(which nadav has). 
 
 
 Naturally, my target with this was to overwrite the authorized_keys file in the /root/.ssh directory with nadav's.

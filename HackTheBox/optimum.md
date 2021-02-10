@@ -59,7 +59,7 @@ I do a searchsploit of HttpFileServer 2.3 and find exactly what I was looking fo
 
 ![](pictures/ssploit-optimum.png)
 
-```python
+```bash
 # Exploit Title: Rejetto HttpFileServer 2.3.x - Remote Command Execution (3)
 # Google Dork: intext:"httpfileserver 2.3"
 # Date: 28-11-2020

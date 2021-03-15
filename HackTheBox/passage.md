@@ -32,13 +32,13 @@ nav_order: 6
 
 ## [](#header-2)Recon:
 
-Running an aggresive nmap scan(bc why not) I can see that there is a open ssh port and a apache webserver running on port 80.
+Running an aggressive nmap scan I can see that there is a open ssh port and a apache webserver running on port 80.
 
 
 ![](pictures/nmap-passage.png)
 
 
-Exploring the target IP's website we get the following page:
+Exploring the target host's website we get the following page:
 
 
 ![](pictures/index-passage.png)

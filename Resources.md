@@ -59,5 +59,6 @@ nav_order: 1
 [Awesome Vulnerable Applications](https://github.com/vavkamil/awesome-vulnerable-apps)
 
 # Misc
+[explains shell commands](https://explainshell.com/)
 [PENTESTING-BIBLE](https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE)\
 [3 Step RDP Honeypot](https://medium.com/pythonic-forensics/3-step-rdp-honeypot-step-3-build-the-bot-c6552fab1740)

@@ -10,7 +10,7 @@ nav_order: 4
 ## Table of contents
 {: .no_toc .text-delta }
 
-![](pictures/logo-academy.png)
+![](pictures/logo-oa.png)
 
 - Summary
 - Recon
@@ -30,7 +30,7 @@ nav_order: 4
 ## [](#header-2)Recon:
 
 
-Doing our regular nmap scan for default scripts and running services I see that there is a ssh port 22 as and an apache server running on port 80.
+Doing our regular nmap scan for safe scripts and running services-versions I see that there is a ssh port 22 as and an apache server running on port 80.
 
 ![](pictures/nmap-oa.png)
 

@@ -7,7 +7,7 @@ nav_order: 2
 ## [](#header-2)Challenge:
 
 
-Navigating to the IP in our browswer we get:
+Navigating to the IP in our browser we get:
 
 
 ![](pictures/challenge-emdee.PNG)

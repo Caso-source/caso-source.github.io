@@ -15,7 +15,7 @@ nav_order: 3
 - Summary
 - Recon
 - Intrusion
-- Explotation
+- Exploitation
 - Privilege Escalation
 {:toc}
 

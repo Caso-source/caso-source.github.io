@@ -23,7 +23,7 @@ nav_order: 3
 
 1. Exploit register function's post form
 2. Find the staging host
-3. Exploit a vulnerbaility in the laravel php framework w/metasploit
+3. Exploit a vulnerability in the laravel php framework w/metasploit
 4. Privesc using dash suid 
 
 ## [](#header-2)Recon:
@@ -32,7 +32,6 @@ Initially when I began to navigate to the target IP it was only accessible after
 More on why here: [understanding-etc-hosts-file-in-linux](https://www.thegeekdiary.com/understanding-etc-hosts-file-in-linux/)
 
 
-![](pictures/logo-academy.png)
 
 Scanning for default scriptsn as well as services (nmap -sC -sV <target IP>) we got the following:
 

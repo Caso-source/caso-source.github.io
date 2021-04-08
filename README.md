@@ -2,7 +2,6 @@
 
 Welcome to the laboratory
 
-Hi everyone.
 
 The purpose of this blog is to both keep record of the CTF challeneges that I participate in and also share these lessons that I have learned with anyone interested.
 

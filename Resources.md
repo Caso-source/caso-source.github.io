@@ -40,7 +40,7 @@ nav_order: 1
 [Advanced Binary Analysis Workshop](https://gitlab.com/gavz/advanced-binary-analysis)\
 [Memory Analysis For Beginners With Volatility Coreflood Trojan: Part 1](https://medium.com/@davidschiff_35251/memory-analysis-for-beginners-with-volatility-coreflood-trojan-part-1-89981433eeb6)\
 [Moving From Common-Sense Knowledge About UEFI To Actually Dumping UEFI Firmware](https://labs.sentinelone.com/moving-from-common-sense-knowledge-about-uefi-to-actually-dumping-uefi-firmware/)\
-[Reversing KR](http://reversing.kr/)\
+[Reversing KR](http://reversing.kr/)
 
 # Cloud
 [Tutorial on privilege escalation and post exploitation tactics in Google Cloud Platform environments](https://about.gitlab.com/blog/2020/02/12/plundering-gcp-escalating-privileges-in-google-cloud-platform/)
@@ -49,9 +49,9 @@ nav_order: 1
 # Mobile
 [Mobile Pentest Cheatsheet](https://github.com/whb224117/MobileApp-Pentest-Cheatsheet)\ 
 [Mobile Hacking Workshop](https://twitter.com/B3nac/status/1317185026677641218?s=20)\
-[How to configure Android (Virtual) for Mobile PenTest](https://securityboulevard.com/2020/09/how-to-configure-android-virtual-for-mobile-pentest/)
+[How to configure Android (Virtual) for Mobile PenTest](https://securityboulevard.com/2020/09/how-to-configure-android-virtual-for-mobile-pentest/)\
 [B3nac Sec Youtube](https://www.youtube.com/channel/UCeSBNDhEqcQSfeR8LEcD-NA)\
-[Appie – Android Pentesting Portable Integrated Environment](https://manifestsecurity.com/appie/)\
+[Appie – Android Pentesting Portable Integrated Environment](https://manifestsecurity.com/appie/)
 
 # CTF
 [picoCTF](https://picoctf.org/)\

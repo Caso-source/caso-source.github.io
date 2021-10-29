@@ -5,11 +5,11 @@ parent: HackTheBox
 nav_order: 4
 ---
 
+![](pictures/logo-openadmin.png)
 
 ## Table of contents
 {: .no_toc .text-delta }
 
-![](pictures/logo-oa.png)
 
 - Summary
 - Recon

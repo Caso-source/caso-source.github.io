@@ -4,15 +4,14 @@ title: Gamezone
 parent: TryHackMe
 nav_order: 5
 ---
+![](pictures/logo-gamezone.png)
 
-# Navigation Structure
-{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }
 
 
-![](pictures/logo-gamezone.png)
+
 
 
 - Task 1

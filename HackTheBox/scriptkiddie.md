@@ -4,13 +4,13 @@ title: Script Kiddie
 parent: HackTheBox
 nav_order: 7
 ---
-# Navigation Structure
-{: .no_toc }
+![](pictures/logo-sk.png)
+
 
 ## Table of contents
 {: .no_toc .text-delta }
 
-![](pictures/logo-sk.png)
+
 
 - Summary
 - Recon

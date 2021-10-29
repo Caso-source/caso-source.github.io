@@ -4,14 +4,14 @@ title: Relevant
 parent: TryHackMe
 nav_order: 4
 ---
+![](pictures/relevant-relevant.jpeg)
 
-# Navigation Structure
-{: .no_toc }
+
 
 ## Table of contents
 {: .no_toc .text-delta }
 
-![](pictures/relevant-relevant.jpeg)
+
 
 
 

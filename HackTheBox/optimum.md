@@ -4,13 +4,13 @@ title: Optimum
 parent: HackTheBox
 nav_order: 5
 ---
-# Navigation Structure
-{: .no_toc }
+![](pictures/logo-optimum.PNG)
+
 
 ## Table of contents
 {: .no_toc .text-delta }
 
-![](pictures/logo-optimum.PNG)
+
 
 - Summary
 - Recon

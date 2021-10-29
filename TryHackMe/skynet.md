@@ -4,13 +4,11 @@ title: Skynet
 parent: TryHackMe
 nav_order: 2
 ---
-# Navigation Structure
-{: .no_toc }
+![](pictures/logo-skynet.png)
+
 
 ## Table of contents
 {: .no_toc .text-delta }
-
-![](pictures/logo-skynet.png)
 
 
 - Summary

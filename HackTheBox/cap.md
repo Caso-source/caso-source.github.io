@@ -4,7 +4,7 @@ title: Cap
 parent: HackTheBox
 nav_order: 7
 ---
-![](pictures/logo-sk.png)
+![](pictures/logo-cap.png)
 
 
 ## Table of contents

@@ -4,14 +4,13 @@ title: Passage
 parent: HackTheBox
 nav_order: 6
 ---
+![](pictures/logo-passage.PNG)
 
-# Navigation Structure
-{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }
 
-![](pictures/logo-passage.PNG)
+
 
 - Summary
 - Recon

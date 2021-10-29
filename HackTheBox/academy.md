@@ -34,10 +34,10 @@ More on why here: [understanding-etc-hosts-file-in-linux](https://www.thegeekdia
 
 
 
-Scanning for default scriptsn as well as services (nmap -sC -sV <target IP>) we got the following:
+Scanning for default scripts as well as services (nmap -sC -sV <target IP>) we got the following:
 
 
-![](pictures/logo-academy.png)
+![](pictures/nmap-academy.png)
 
 Very little which works for me since there is less to target. 
 

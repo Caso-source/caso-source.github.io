@@ -4,13 +4,14 @@ title: Academy
 parent: HackTheBox
 nav_order: 3
 ---
-# Navigation Structure
-{: .no_toc }
+
+![](pictures/logo-academy.png)
+
 
 ## Table of contents
 {: .no_toc .text-delta }
 
-![](pictures/logo-academy.png)
+
 
 - Summary
 - Recon

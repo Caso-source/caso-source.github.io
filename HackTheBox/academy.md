@@ -65,7 +65,7 @@ Only after looking under the hood at the requests on the register page, I found 
 ![](pictures/role-academy.png)
 
 
-Once I changed the value of my role to 1 and forwarded the post request on I was able to login to the admin portal
+Once I changed the value of my role to 1 and forwarded the post request, I was able to login to the admin portal
 
 ![](pictures/admin1-academy.png)
 
@@ -76,7 +76,7 @@ The last item on the to do list stood out to me the most, so after adding the st
 
 ![](pictures/staging-academy.png)
 
-I found the following information useful and after wondering what laravel was and getting sidetracked I looked it up and it appears it is a php framework
+I found the following information useful and after wondering what laravel was and getting sidetracked I looked it up and found it to be a php framework
 
 ```bash
 Environment & details:
@@ -475,18 +475,18 @@ MIX_PUSHER_APP_CLUSTER
 
 Registered Handlers
 ```
-Find a quick exploit in metasploit
+Next step is to find a quick exploit in metasploit
 
 ![](pictures/ssploit-academy.png)
 
 
 ## [](#header-2)Exploitation:
 
-Once I set up the exploit in MSF I finally got that initial shell
+Once I set up the exploit in MSF, I finally get the initial shell
 
 ![](pictures/msf-academy.png)
 
-After finding some information in the .env  file I was able to use the password found to ssh into the server
+After finding some information in the .env  file I was able to use the password uncovered to ssh into the server
 
 ```bash
 
@@ -539,7 +539,7 @@ From here the privesc was not bad at all. After finding all SUID binaries with
 find / -perm -u=s -type f 2>/dev/null
 ```
 
-I see that the dash shell has a suid bit and will allow me to execute as root with 
+I see that the dash shell has a suid bit and will allow me to execute as root
 
 ```bash
 dash -p
@@ -552,4 +552,4 @@ dash -p
 ![](pictures/root-academy.png)
 
 
-and there we go!
+There we go!

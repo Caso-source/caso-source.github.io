@@ -100,11 +100,7 @@ To check if the user can use any commands as sudo use the following command:
 sudo -l
 ```
 
-As hilarious as it sounds I found a couple days after I finished the box and am doing the writeup that I did not capture the full whomai command here:
-
-![](pictures/root-sk.png)
-
-So you'll have to trust me on this one.
+From here the path to root is simpley to use the path to metasploit found from the sudo -l command to access the root folder flag.
 
 
 

@@ -47,7 +47,7 @@ nav_order: 1
 [ghostlulz1337's post](https://twitter.com/ghostlulz1337/status/1314262418441338881?s=20)
 
 # Mobile
-[Mobile Pentest Cheatsheet](https://github.com/whb224117/MobileApp-Pentest-Cheatsheet)\ 
+[Mobile Pentest Cheatsheet](https://github.com/whb224117/MobileApp-Pentest-Cheatsheet)
 [Mobile Hacking Workshop](https://twitter.com/B3nac/status/1317185026677641218?s=20)\
 [How to configure Android (Virtual) for Mobile PenTest](https://securityboulevard.com/2020/09/how-to-configure-android-virtual-for-mobile-pentest/)\
 [B3nac Sec Youtube](https://www.youtube.com/channel/UCeSBNDhEqcQSfeR8LEcD-NA)\
